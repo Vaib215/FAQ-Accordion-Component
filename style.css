@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+*,*::after,*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    /* Add linear gradient to the background */
+    background: linear-gradient(to bottom, hsl(273, 75%, 66%) 0%, hsl(240, 73%, 65%) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 8em;
+    overflow-y: hidden;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+hr {
+    background: hsl(240, 5%, 91%);
+    /* No border */
+    border: 0;
+    /* Height of the line */
+    height: 2px;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    margin: 8em;
+    background: white;
+    padding: 4em 0;
+    border-radius: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left{
+    width: 60%;
+    position: relative;
+}
+
+.left img{
+    width: 100%;
+    margin-left: -4em;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: stretch;
+    width: 70%;
+    gap: 2em;
+}
+
+.faq-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    width: 70%;
+}
+
+details summary{
+    list-style: none;
+    outline: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    cursor: pointer;
+    font-size: 0.8em;
+    color: hsl(238, 29%, 16%);
+}
+
+details p{
+    color: hsl(237, 12%, 33%);
+    font-size: 0.em;
+    margin: 0.5em 0;
+}
+
+.pattern {
+    position: absolute;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.rotated {
+    transform: rotate(180deg);
+}
+
+.arrow {
+    pointer-events: none;
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+        margin: 2em;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 12em 0 4em;
+        padding: 0 0 4em;
+    }
+    .left, .right {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    .left img {
+        margin-left: 0;
+        transform: scale(0.8);
+        margin-top: -14em;
+    }
+}
